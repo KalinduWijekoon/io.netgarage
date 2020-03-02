@@ -31,3 +31,9 @@ As you can see in the above image, there is a file which has the name `level01` 
 
 Run this file using `./level01` command and you will be asked for a three digit passcode. Type some random three digit value and it will not work. 
 ![](https://user-images.githubusercontent.com/37071700/75666141-542ad180-5c9b-11ea-9c98-a557c8ec4d26.PNG)
+
+
+To find the three digit key, 
+Launch the program under gdb:
+
+    $ gdb level01
