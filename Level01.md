@@ -63,6 +63,8 @@ Exit from gdb using `quit` command and then try our new three digit key as the l
 Type `id` command to verify the `Effective User ID`
 ![](https://user-images.githubusercontent.com/37071700/75669870-c7374680-5ca1-11ea-9929-e09f29be5b45.PNG)
 
-So the key is `XNWFtWKWHhaaXoKI`
 Finally use the `cat /home/level2/.pass` to get the ssh login password to the next level (level02)
 ![](https://user-images.githubusercontent.com/37071700/75669947-e6ce6f00-5ca1-11ea-8cef-2d3fd2c302f7.PNG)
+
+
+So, the key is `XNWFtWKWHhaaXoKI`
