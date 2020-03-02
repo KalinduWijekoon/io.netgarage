@@ -6,3 +6,4 @@ url: level1@io.netgarage.org
 ---
 
 ssh to the above url via port no 2224 as mentioned in the http://io.netgarage.org/
+use level1 as the password 
