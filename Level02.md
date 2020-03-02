@@ -37,3 +37,23 @@ According to the mannual page of signal (System Calls [2]), we can maybe trigger
 (reffer this URL [man 2 signal](https://linux.die.net/man/2/signal) or type `man 2 signal` in your linux terminal)
 ![](https://user-images.githubusercontent.com/37071700/75691524-3f196700-5cca-11ea-9663-9fe08876c57a.PNG)
 
+Here I tried to put -1 as the parameters but it didnt work.<br>
+![](https://user-images.githubusercontent.com/37071700/75692003-e8605d00-5cca-11ea-945f-754d4db9a777.PNG)<br><br><br>
+Anyhow, at this point we know that our second paramerter should be `-1`<br>To get the `SIGFPE` triggered we need another value for the first parameter, to do that we need a value that exists in the outer scope of integer definition and that will be the `INT_MIN` `(-2147483648)` value in C.<br> __Why INT_MIN? Because it will generate 2147483648 which is greater than INT_MAX(2147483647) which is the integer limit.__<br>(reffer [abs function documentation](https://en.cppreference.com/w/c/numeric/math/abs) for more details)<br><br><br>
+So, to gain the level3 shell we need to set level02 executable file parameters like,<br>
+`./level02 -2147483648 -1`
+
+Then you will get the access<br>![](https://user-images.githubusercontent.com/37071700/75694776-16e03700-5ccf-11ea-9327-fa7c98c93d9c.PNG)
+
+Finally use the `cat /home/level3/.pass` to get the ssh login password to the next level (level03)
+![](https://user-images.githubusercontent.com/37071700/75694980-60308680-5ccf-11ea-97ea-009fd99982ea.PNG)
+
+So, the key is `OlhCmdZKbuzqngfz`
+
+
+
+
+
+
+
+
