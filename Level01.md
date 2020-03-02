@@ -54,6 +54,7 @@ Then by running the `start` command, gdb will run the programe and provide us wi
 Run the `set disassembly-flavor intel` and then run `disassemble main` command to get the assembly code of the `main` function of the `level01` programe. And there you need to find the comparison which will be indicated using `cmp`. The value in cmp is a hexadecimal value, we can display its decimal value with `p` or `print` in gdb. Other value `eax` is a register which compare the hexa value with.
 
 Getting the hexa value
+
 ![](https://user-images.githubusercontent.com/37071700/75669561-39f3f200-5ca1-11ea-9c56-2070980b652e.PNG)
 
 Exit from gdb using `quit` command and then try our new three digit key as the level01 access key.
