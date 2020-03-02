@@ -21,6 +21,7 @@ Using the `cat README` command, you can view the level instructions.
 So, in this readme file there are instructions to move to a location called levels which is in the root.
 
 cd to the root
+
 ![](https://user-images.githubusercontent.com/37071700/75665588-648e7c80-5c9a-11ea-9286-27a15ccb20fd.PNG)
 
 Then cd to the `levels` folder and by running the ls -la command find the executables.
