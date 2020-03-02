@@ -7,6 +7,8 @@ url: level1@io.netgarage.org
 
 `ssh` to the above url via port no `2224` as mentioned in [io.netgarage.org](http://io.netgarage.org/)
 
+You can use putty client or you can use openSSH with the command `ssh -p 2224 level1@io.netgarage.org`
+
 use __`level1`__ as the password. 
 
 You will get a welcome screen like this.
@@ -37,3 +39,28 @@ To find the three digit key,
 Launch the program under gdb:
 
     $ gdb level01
+    
+![](https://user-images.githubusercontent.com/37071700/75667268-63128380-5c9d-11ea-967f-1d450bb8de8e.PNG)
+
+Type `info functions` to get information about available functions
+![](https://user-images.githubusercontent.com/37071700/75667448-b4227780-5c9d-11ea-9c92-aef359ad41df.PNG)
+
+Then by running the `start` command, gdb will run the programe and provide us with the temporary breakpoint.
+
+![](https://user-images.githubusercontent.com/37071700/75667626-fe0b5d80-5c9d-11ea-93dc-027023a60fc3.PNG)
+
+(If you want you can again run the `info functions` to view runtime functions of the application.)
+
+Run the `set disassembly-flavor intel` and then run `disassemble main` command to get the assembly code of the `main` function of the `level01` programe. And there you need to find the comparison which will be indicated using `cmp`. The value in cmp is a hexadecimal value, we can display its decimal value with `p` or `print` in gdb. Other value `eax` is a register which compare the hexa value with.
+
+Getting the hexa value
+![](https://user-images.githubusercontent.com/37071700/75669561-39f3f200-5ca1-11ea-9c56-2070980b652e.PNG)
+
+Exit from gdb using `quit` command and then try our new three digit key as the level01 access key.
+![](https://user-images.githubusercontent.com/37071700/75669743-8f300380-5ca1-11ea-8c51-72a27b98fbfb.PNG)
+
+Type `id` command to verify the `Effective User ID`
+![](https://user-images.githubusercontent.com/37071700/75669870-c7374680-5ca1-11ea-9929-e09f29be5b45.PNG)
+
+Finally use the `cat /home/level2/.pass` to get the ssh login password to the next level (level02)
+![](https://user-images.githubusercontent.com/37071700/75669947-e6ce6f00-5ca1-11ea-8cef-2d3fd2c302f7.PNG)
